@@ -1,7 +1,2 @@
-#TODO : Add a Project Readme 🎉
-- [ ] Test 1
-- [x] Test 2
-
-## Hello I love 
-- lorem
-- ipsum
+# Pluralsight NoteKeeper 
+I am a Note keeper 📜 🔐 for Pluralsight Courses 
