@@ -33,7 +33,7 @@
         android:contentDescription="@string/app_name"
         android:minWidth="48dp"
         android:minHeight="48dp"
-        app:srcCompat="@android:drawable/ic_dialog_email"
+        app:srcCompat="@android:drawable/ic_input_add"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

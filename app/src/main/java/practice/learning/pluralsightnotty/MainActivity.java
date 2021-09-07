@@ -5,13 +5,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.snackbar.Snackbar;
-
 import practice.learning.pluralsightnotty.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-    //    Class Global Variables
-    Boolean changedTextState = false;
+    int i = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +21,8 @@ public class MainActivity extends AppCompatActivity {
         TextView editText = findViewById(R.id.edit_text);
 
         binding.fab.setOnClickListener(view -> {
-            changedTextState = !changedTextState;
-            String textState = changedTextState ? "Changed the Text 🎉" : "🐚 Hello Edit Me Click on the fab";
-            editText.setText(textState);
-            Snackbar.make(view, "Changed the text to" + textState, Snackbar.LENGTH_SHORT)
-                    .setAction("Action", null).show();
+            String t = "Click on fab 🍻 \n to Increment: " + i++;
+            editText.setText(t);
         });
     }
 }
