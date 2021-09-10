@@ -1,11 +1,11 @@
 package practice.learning.pluralsightnotty;
 
-import static practice.learning.pluralsightnotty.MyWorker.doubleTheValue;
-
 import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import practice.learning.pluralsightnotty.databinding.ActivityMainBinding;
 
@@ -22,10 +22,15 @@ public class MainActivity extends AppCompatActivity {
 //        Create Toolbar 🛠
         setSupportActionBar(binding.toolbar);
 
-//        View variable bindings 📦
-        TextView editText = findViewById(R.id.edit_text);
-
 //        Fab Click listener 🤔
-        binding.fab.setOnClickListener(view -> editText.setText(doubleTheValue(Integer.parseInt(editText.getText().toString()))));
+        binding.fab.setOnClickListener(view -> {
+            TextView editText = MainActivity.this.findViewById(R.id.edit_text);
+            String stringValue = editText.getText().toString();
+            int originalValue = Integer.parseInt(stringValue);
+            int newValue = MyWorker.doubleTheValue(originalValue);
+            editText.setText(Integer.toString(newValue));
+
+            Snackbar.make(view, "Changed 📦 Value to: " + newValue + " from: " + originalValue + " 🎉", Snackbar.LENGTH_SHORT).show();
+        });
     }
 }

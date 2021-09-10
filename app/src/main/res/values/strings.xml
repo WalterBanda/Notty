@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Pluralsight Notty</string>
+    <string name="message">Tap 🤞 to double 2️⃣   the Value:</string>
     <string name="testIncrement">0</string>
 </resources>
